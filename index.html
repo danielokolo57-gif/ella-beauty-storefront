@@ -1,26 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EllaBeauty — Luxury Beauty for Every Nigerian Woman</title>
+  <meta name="description" content="Discover premium cosmetics designed to celebrate your unique beauty. Shop luxury skincare, makeup, and beauty accessories." />
+  <meta property="og:title" content="EllaBeauty — Premium Nigerian Beauty" />
+  <meta property="og:description" content="Luxury beauty products for every Nigerian woman." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">ella<span class="accent">beauty</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" x2="21" y1="6" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <!-- HERO -->
+  <section class="hero" style="background-image:url('images/hero.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Premium Nigerian Beauty</p>
+      <h1>Luxury Beauty for Every Nigerian Woman</h1>
+      <p class="hero-sub">Discover our curated collection of premium cosmetics designed to celebrate your unique beauty.</p>
+      <a href="#shop" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- FEATURED PRODUCTS -->
+  <section id="shop" class="section">
+    <div class="container">
+      <p class="section-tag">Our Collection</p>
+      <h2 class="section-title">Featured Products</h2>
+      <div class="product-grid" id="productGrid">
+        <div class="loading-msg" id="loadingMsg">
+          <div class="spinner"></div>
+          <p>Loading products...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories" class="section">
+    <div class="container">
+      <p class="section-tag">Browse by</p>
+      <h2 class="section-title">Categories</h2>
+      <div class="category-grid">
+        <a href="#shop" class="category-card" style="background-image:url('images/makeup.jpg')">
+          <div class="category-overlay"></div>
+          <span>Makeup</span>
+        </a>
+        <a href="#shop" class="category-card" style="background-image:url('images/skincare.jpg')">
+          <div class="category-overlay"></div>
+          <span>Skincare</span>
+        </a>
+        <a href="#shop" class="category-card" style="background-image:url('images/cosmetics.jpg')">
+          <div class="category-overlay"></div>
+          <span>Accessories</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <section class="promo" style="background-image:url('images/promo.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="promo-content">
+      <p class="section-tag">New Collection</p>
+      <h2>Glow With Confidence</h2>
+      <a href="#shop" class="btn-outline">Discover Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="about" class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h3 class="logo">ella<span class="accent">beauty</span></h3>
+        <p>Premium beauty products for every Nigerian woman. Quality, elegance, confidence.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">Email Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EllaBeauty. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart (<span id="cartItemCount">0</span>)</h3>
+      <button id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Your cart is empty</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">₦0</span>
+      </div>
+      <button class="btn-primary full-width">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
